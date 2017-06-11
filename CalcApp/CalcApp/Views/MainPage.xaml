@@ -5,7 +5,37 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CalcApp.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-  </StackLayout>
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Text="000,000" BackgroundColor="#010001" TextColor="White" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0"/>
+        <Button Text="C" Grid.Column="0" Grid.Row="1" BackgroundColor="#ccccce" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="+/-" Grid.Column="1" Grid.Row="1" BackgroundColor="#ccccce" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="%" Grid.Column="2" Grid.Row="1" BackgroundColor="#ccccce" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="%" Grid.Column="3" Grid.Row="1" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="7" Grid.Column="0" Grid.Row="2" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="8" Grid.Column="1" Grid.Row="2" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="9" Grid.Column="2" Grid.Row="2" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="X" Grid.Column="3" Grid.Row="2" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="4" Grid.Column="0" Grid.Row="3" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="5" Grid.Column="1" Grid.Row="3" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="6" Grid.Column="2" Grid.Row="3" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="-" Grid.Column="3" Grid.Row="3" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="." Grid.Column="2" Grid.Row="4" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+        <Button Text="=" Grid.Column="3" Grid.Row="4" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
+    </Grid>
 </ContentPage>
+    

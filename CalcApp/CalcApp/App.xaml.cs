@@ -12,7 +12,7 @@ namespace CalcApp
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("MainPage");
         }
 
         protected override void RegisterTypes()
