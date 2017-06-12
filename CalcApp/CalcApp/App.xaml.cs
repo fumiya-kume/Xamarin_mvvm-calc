@@ -1,5 +1,7 @@
-﻿using Prism.Unity;
+﻿using CalcApp.UseCase;
+using Prism.Unity;
 using CalcApp.Views;
+using Microsoft.Practices.Unity;
 using Xamarin.Forms;
 
 namespace CalcApp
@@ -17,6 +19,8 @@ namespace CalcApp
 
         protected override void RegisterTypes()
         {
+            Container.RegisterType<ICalcUseCase, CalcUseCase>(new ContainerControlledLifetimeManager());
+
             Container.RegisterTypeForNavigation<MainPage>();
         }
     }

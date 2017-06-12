@@ -6,7 +6,7 @@
              x:Class="CalcApp.Views.MainPage"
              Title="計算機">
     <StackLayout Orientation="Vertical" BackgroundColor="#202020">
-        <Label Text="000,000" FontSize="Large" TextColor="White" VerticalOptions="FillAndExpand" HorizontalTextAlignment="End" VerticalTextAlignment="End">
+        <Label Text="{Binding CalcResultLabel.Value}" FontSize="Large" TextColor="White" VerticalOptions="FillAndExpand" HorizontalTextAlignment="End" VerticalTextAlignment="End">
             <Label.Margin>
                 <OnPlatform x:TypeArguments="Thickness"
                         iOS="0, 20, 0, 0"
@@ -40,6 +40,7 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Button Text="AC" Grid.Column="0" Grid.Row="0" BackgroundColor="#ccccce"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
             <Button Text="+/-" Grid.Column="1" Grid.Row="0" BackgroundColor="#ccccce"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
@@ -53,9 +54,13 @@
             <Button Text="5" Grid.Column="1" Grid.Row="2" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
             <Button Text="6" Grid.Column="2" Grid.Row="2" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
             <Button Text="-" Grid.Column="3" Grid.Row="2" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
-            <Button Text="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
-            <Button Text="." Grid.Column="2" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
-            <Button Text="=" Grid.Column="3" Grid.Row="3" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
+            <Button Text="1" Command="{Binding Key1Command}" Grid.Column="0" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="2" Grid.Column="1" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="3" Grid.Column="2" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="+" Command="{Binding AddCommand}" Grid.Column="3" Grid.Row="3" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
+            <Button Text="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="." Grid.Column="2" Grid.Row="4" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="=" Grid.Column="3" Grid.Row="4" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
         </Grid>
     </StackLayout>
 </ContentPage>
