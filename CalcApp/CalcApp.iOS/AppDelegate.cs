@@ -26,9 +26,10 @@ namespace CalcApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
-
+            
             return base.FinishedLaunching(app, options);
         }
+        
     }
 
     public class iOSInitializer : IPlatformInitializer

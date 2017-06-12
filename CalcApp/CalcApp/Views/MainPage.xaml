@@ -4,38 +4,59 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CalcApp.Views.MainPage"
-             Title="MainPage">
-    <Grid RowSpacing="0" ColumnSpacing="0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Label Text="000,000" BackgroundColor="#010001" TextColor="White" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0"/>
-        <Button Text="C" Grid.Column="0" Grid.Row="1" BackgroundColor="#ccccce" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="+/-" Grid.Column="1" Grid.Row="1" BackgroundColor="#ccccce" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="%" Grid.Column="2" Grid.Row="1" BackgroundColor="#ccccce" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="%" Grid.Column="3" Grid.Row="1" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="7" Grid.Column="0" Grid.Row="2" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="8" Grid.Column="1" Grid.Row="2" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="9" Grid.Column="2" Grid.Row="2" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="X" Grid.Column="3" Grid.Row="2" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="4" Grid.Column="0" Grid.Row="3" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="5" Grid.Column="1" Grid.Row="3" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="6" Grid.Column="2" Grid.Row="3" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="-" Grid.Column="3" Grid.Row="3" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="." Grid.Column="2" Grid.Row="4" BackgroundColor="#d6d7d9" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-        <Button Text="=" Grid.Column="3" Grid.Row="4" BackgroundColor="#f78511" Margin="-1.99" BorderColor="Black" BorderRadius="0"/>
-    </Grid>
+             Title="計算機">
+    <StackLayout Orientation="Vertical" BackgroundColor="#202020">
+        <Label Text="000,000" FontSize="Large" TextColor="White" VerticalOptions="FillAndExpand" HorizontalTextAlignment="End" VerticalTextAlignment="End">
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness"
+                        iOS="0, 20, 0, 0"
+                        Android="0"
+                        WinPhone="0" />
+            </Label.Margin>
+        </Label>
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowSpacing>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.iOS>1</OnPlatform.iOS>
+                    <OnPlatform.Android>1</OnPlatform.Android>
+                    <OnPlatform.WinPhone>0</OnPlatform.WinPhone>
+                </OnPlatform>
+            </Grid.RowSpacing>
+            <Grid.ColumnSpacing>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.iOS>1</OnPlatform.iOS>
+                    <OnPlatform.Android>1</OnPlatform.Android>
+                    <OnPlatform.WinPhone>0</OnPlatform.WinPhone>
+                </OnPlatform>
+            </Grid.ColumnSpacing>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Text="C" Grid.Column="0" Grid.Row="0" BackgroundColor="#ccccce"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="+/-" Grid.Column="1" Grid.Row="0" BackgroundColor="#ccccce"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="%" Grid.Column="2" Grid.Row="0" BackgroundColor="#ccccce"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="%" Grid.Column="3" Grid.Row="0" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
+            <Button Text="7" Grid.Column="0" Grid.Row="1" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="8" Grid.Column="1" Grid.Row="1" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="9" Grid.Column="2" Grid.Row="1" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="X" Grid.Column="3" Grid.Row="1" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
+            <Button Text="4" Grid.Column="0" Grid.Row="2" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="5" Grid.Column="1" Grid.Row="2" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="6" Grid.Column="2" Grid.Row="2" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="-" Grid.Column="3" Grid.Row="2" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
+            <Button Text="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="." Grid.Column="2" Grid.Row="3" BackgroundColor="#d6d7d9"   BorderRadius="0" FontSize="Large" TextColor="Black"/>
+            <Button Text="=" Grid.Column="3" Grid.Row="3" BackgroundColor="#f78511"   BorderRadius="0" FontSize="Large" TextColor="White"/>
+        </Grid>
+    </StackLayout>
 </ContentPage>
     

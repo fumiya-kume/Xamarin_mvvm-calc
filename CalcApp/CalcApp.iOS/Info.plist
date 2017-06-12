@@ -48,5 +48,6 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleIdentifier</key>
 	<string>nagoya.kuxu.calc</string>
+  <false/>
 </dict>
 </plist>
